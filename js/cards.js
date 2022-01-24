@@ -74,6 +74,7 @@ card.href = 'https://sony.com'
 var objetoAñadido = this.heading
 
 
+
 card.addEventListener('click', function(e){
   // alert('Tarjeja clickeada')
   e.preventDefault() // Eliminar que el viculo te lleve a otro lugar

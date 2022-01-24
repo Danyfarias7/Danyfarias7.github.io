@@ -3,7 +3,7 @@
  border: 4px solid white ;
  display: none;
  position: fixed;
- background-color: rgba(115, 110, 110, 0.612);
+ background-color: rgba(115, 110, 110, 0.775);
  top: 50px;
  width: 60%;
  z-index: 99;
@@ -16,5 +16,17 @@ box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
      &--visible{
           display: block;
      }
+}
+
+
+.carrito__item{
+     
+     text-align: center;
+     margin-bottom: 10px;
+     margin-top: 6px;
+    background-color: rgb(12, 12, 11);
+    color: rgb(161, 231, 19);
+     
+
 }
 
