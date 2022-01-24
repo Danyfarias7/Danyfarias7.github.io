@@ -1,0 +1,147 @@
+/* ***************************************************************/
+/* CONTACTO*/
+/* ***************************************************************/
+
+
+
+.body-contact{
+    background: url('../img/Yvonne_Solo.jpg');
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    background-position: top;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+    /* filter: brightness(40%); */
+    background-attachment: fixed;
+
+}
+
+
+
+
+.contact-form{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.contact-form__form{
+    width: 90%;
+    max-width: 60%;
+    
+}
+
+
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+
+
+
+.contact-form__form input,
+.contact-form__form  textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #ffff;
+    background: transparent;
+    font-size: 15px;
+    resize: none;
+}
+
+
+.contact-form__form .contact-form__row .input-group label{
+    height: 100%; 
+    position:absolute; 
+    left: 0;
+   top: 0; 
+   padding: 10px;
+   color: #fff;
+   cursor: text;
+   transition: 0.3s;
+}
+
+
+.contact-form__form  .input-group  label{
+    height: 100%; 
+    position:absolute; 
+    left: 0;
+   top: 0; 
+   padding: 10px;
+   color: #fff;
+   cursor: text;
+   transition: 0.3s;
+}
+
+
+ .contact-form__row  .input-group label{
+    height: 100%; 
+    position:absolute; 
+    left: 0;
+   top: 0; 
+   padding: 10px;
+   font-size: small;
+   color: transparent;
+   cursor: text;
+   transition: 0.3s;
+  
+   
+}
+
+
+.contact-form__row .input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label{
+    top: -35px;
+    font-size: 14px;
+}
+
+
+
+.contact-form__row{
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+}
+
+.contact-form__row .input-group{
+    flex-basis: 48%;
+}
+
+
+.final-button{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+
+.final-button:hover{
+    background: rgba(255, 255, 255, 0.265);
+}

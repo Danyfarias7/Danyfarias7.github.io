@@ -1,0 +1,93 @@
+
+/* ***************************************************************/
+/* HOME  CARDS*/
+/* ***************************************************************/
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    color: white;
+
+
+}
+
+
+
+
+.body-cards{
+    background: url('../img/MD_Harden_ST3.jpg');
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    background-position: top;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+/* ***************************************************************/
+/* FILTER  HOME CARDS*/
+/* ***************************************************************/
+
+
+
+.filter-bar__filter-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  
+ 
+
+}
+
+.filter-bar__filter-item{
+  padding:10px 10px;
+  margin-left: 2px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+
+
+  font-size: 12px;
+  list-style-type: none;
+   
+}
+
+
+.filter-bar__filter-link{
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.filter-bar__filter-item:hover{
+    background-color: rgba(255, 255, 255, 0.767);
+    
+}
+
+.filter-bar__filter-item:hover .filter-bar__filter-link{
+    color: rgba(0, 0, 0, 0.678);
+}
+
+

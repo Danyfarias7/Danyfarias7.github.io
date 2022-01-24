@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/3d081c731a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body-contact">
+  <header class="main-header">
+
+    <input type="checkbox" id="menu">
+
+
+
+    <nav class="nav-bar">
+      <ul class="nav-bar__nav-list">
+
+        <li class="nav-bar__nav-item"><a href="index.html" class="nav-bar__nav-link">Home</a></li>
+
+        <li class="nav-bar__nav-item"><a href="cards.html" class="nav-bar__nav-link">Shop</a></li>
+
+        <li class="nav-bar__nav-item"><a href="nosotros.html" class="nav-bar__nav-link">About</a></li>
+
+        <li class="nav-bar__nav-item"><a href="contacto.html" class="nav-bar__nav-link">Contact</a></li>
+
+        <li class="nav-bar__nav-item"><a href="alta.html" class="nav-bar__nav-link">Register</a></li>
+      </ul>
+
+    </nav>
+
+
+    <div class="search-bar">
+
+
+      <div class="search-bar__first-container">
+        <div class="search-bar__logo-container">
+          <h2>Connecticus</h2>
+        </div>
+        <form class="search-bar__form-container">
+          <label class="search-bar__form-label" for="busqueda"></label>
+          <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Search Here">
+          <input class="search-bar__form-submit" type="submit" value="search">
+        </form>
+      </div>
+
+
+      <div class="search-bar__second-container">
+
+        <div class="search-bar__carrito-container">
+          <a href="#">Cart <img src="img/cart-icon.png" alt=""></a>
+        </div>
+
+        <div class="menu-toggle">
+          <label class="menu-toggle__label" for="menu">
+            <span class="menu-toggle__pan-arriba"></span>
+            <span class="menu-toggle__medallon"></span>
+            <span class="menu-toggle__pan-abajo"></span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!-- FORM -->
+
+
+  <div class="contact-form">
+
+
+
+    <form class="contact-form__form">
+
+      <div class="contact-form__row">
+        <div class="input-group">
+          <input type="text" required id="name">
+          <label for="name"> <i class="fas fa-user"></i> Your Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="text" required id="number">
+          <label for="number"> <i class="fas fa-phone-square-alt"></i> Phone No.</label>
+        </div>
+      </div>
+
+
+      <div class="input-group">
+        <input type="text" required id="email">
+        <label for="email"> <i class="fas fa-envelope-square"></i> Email Id</label>
+      </div>
+
+      <div class="input-group">
+        <textarea id="message" rows="8" required></textarea>
+        <label for="message"><i class="fas fa-comments"></i> Your Message</label>
+      </div>
+
+      <button class="final-button" type="submit"><i class="far fa-paper-plane"></i> SUBMIT</button>
+    </form>
+
+  </div>
+</body>
+
+</html>
