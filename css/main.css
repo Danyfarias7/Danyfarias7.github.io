@@ -258,19 +258,6 @@
 /************************************************** */
 /* ALTA*/
 /* ************************************************* */
-.body-alta {
-  background: url("../img/PostMalone-background-4.jpg");
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  background-position: top;
-  background-size: cover;
-  top: 0;
-  z-index: -1;
-  filter: brightness(100%);
-  background-attachment: fixed;
-}
-
 .reg-form {
   width: 100%;
   height: 100vh;
@@ -381,19 +368,6 @@
 /* ***************************************************************/
 /* CONTACTO*/
 /* ***************************************************************/
-.body-contact {
-  background: url("../img/Yvonne_Solo.jpg");
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  background-position: top;
-  background-size: cover;
-  top: 0;
-  z-index: -1;
-  /* filter: brightness(40%); */
-  background-attachment: fixed;
-}
-
 .contact-form {
   width: 100%;
   height: 100vh;
@@ -696,22 +670,6 @@ h3 img {
 }
 
 /***********************************
-ABOUT US BACKGROUND HEADER
-*************************************/
-.body-about-us {
-  background: url("../img/lebron-background-3.jpg");
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-position: top;
-  background-size: cover;
-  top: 0;
-  z-index: -1;
-  /* filter: brightness(40%); */
-  background-attachment: fixed;
-}
-
-/***********************************
 ABOUT US 
 *************************************/
 .about {
@@ -720,14 +678,6 @@ ABOUT US
   align-items: center;
   justify-content: center;
   background-color: #f1f1f1;
-}
-
-.about-section {
-  background: url("../img/lebron-background-3.jpg") no-repeat left;
-  background-size: 65%;
-  background-color: #fdfdfd;
-  overflow: hidden;
-  padding: 100px 0;
 }
 
 .about-section__inner-container {
@@ -808,18 +758,6 @@ MEDIA QUERIES ABOUT US
   text-decoration: none;
   border: none;
   color: white;
-}
-
-.body-cards {
-  background: url("../img/MD_Harden_ST3.jpg");
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  background-position: top;
-  background-size: cover;
-  top: 0;
-  z-index: -1;
-  background-attachment: fixed;
 }
 
 /* ***************************************************************/
@@ -999,6 +937,64 @@ MEDIA QUERIES ABOUT US
   box-shadow: 3px 12px 28px -1px rgba(0, 0, 0, 0.57);
   -webkit-box-shadow: 3px 12px 28px -1px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 3px 12px 28px -1px rgba(0, 0, 0, 0.57);
+}
+
+.body-alta {
+  background: url("../img/PostMalone-background-4.jpg");
+  width: 100%;
+  position: absolute;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+  filter: brightness(100%);
+  background-attachment: fixed;
+}
+
+.body-contact {
+  background: url("../img/Yvonne_Solo.jpg");
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+  /* filter: brightness(40%); */
+  background-attachment: fixed;
+}
+
+.body-cards {
+  background: url("../img/MD_Harden_ST3.jpg");
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+.about-section {
+  background: url("../img/lebron-background-3.jpg") no-repeat left;
+  background-size: 65%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.body-about {
+  background: url("../img/lebron-background-3.jpg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+  /* filter: brightness(40%); */
+  background-attachment: fixed;
 }
 
 /*# sourceMappingURL=main.css.map */
