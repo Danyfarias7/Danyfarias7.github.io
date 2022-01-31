@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
+
+
 <body class="body-alta" >
-
-
-
-
 
 
 
@@ -76,100 +74,136 @@
 
 
 
+
+
+
+
+<!-- ======================================================== -->
+
     <!-- Product Registration -->
     <div class="reg-form">
-        <form class="reg-form-container" action="">
+        <form class="reg-form-container" autocomplete="off">
 
 
             <h1>Product Registration</h1>
+            
+            
+                  <!-- -----------------------------BRAND -->
 
+                  <div class="reg-form__brand">
+                    <label for="marca">Brand:</label>
+                    <select id="marca" name="marca" id="selectBrand" >
+                        <option value="">Select an Option</option>
+                        <option value="4">Beats</option>
+                        <option value="37">Apple</option>
+                        <option value="88">Bose</option>
+                        <option value="14">Sony</option>
+                    </select>
+                </div>
+    
+                    <!-- -----------------------------CATEGORY -->
+    
+                <div class="reg-form__category">
+                    <label for="categoria">Category:</label>
+                    <select id="categoria" name="categoria" id="selectCategory">
+                        <option value="">Select a Category</option>
+                        <optgroup label="New Models">
+                            <option value="70">Beats Studio Buds</option>
+                        </optgroup>
+                        <optgroup label="Wireless">
+                            <option value="45">Beats Flex</option>
+                            <option value="17">Powerbeats</option>
+                            <option value="2">Beats Solo3 Wireless</option>
+                            <option value="14">Powerbeats Pro</option>
+                        </optgroup>
+                        <optgroup label="Premium">
+                            <option value="3">Beats Studio3 Wireless</option>
+                        </optgroup>
+                        <optgroup label="Classic - Wired">
+                            <option value="3">Beats EP</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- -----------------------------NAME -->
             <div class="reg-form__name">
                 <label for="nombre">Name:</label>
-                <input id="nombre" name="nombre" autofocus required minlength="3" maxlength="20" ">
+                <input id="nombre" name="nombre" autofocus  ">
                 </div>
+                <div class="pop-up-alert"></div>
+                
+                <!-- -----------------------------PRICE -->  
         
                 <div class=" reg-form__price">
                 <label for="precio">Price:</label>
-                <input type="number" id="precio" name="precio" required min="0" step=".5">
+                <input type="text" id="precio" name="precio"  >
             </div>
+            <div class="pop-up-alert"></div>
 
-
-
-
-
+                    <!-- -----------------------------STOCK -->
             <div class="reg-form__stock">
                 <label for="stock">Stock:</label>
-                <input type="number" id="stock" name="stock" max="100">
+                <input type="text" id="stock" name="stock" >
             </div>
+            <div class="pop-up-alert"></div>
+            
+            
+        
 
-            <div class="reg-form__brand">
-                <label for="marca">Brand:</label>
-                <select id="marca" name="marca" aria-placeholder="hola">
-                    <option value="">Select an Option</option>
-                    <option value="4">Beats</option>
-                    <option value="37">Apple</option>
-                    <option value="88">Bose</option>
-                    <option value="14">Sony</option>
-                </select>
-            </div>
-
-
-            <div class="reg-form__category">
-                <label for="categoria">Category:</label>
-                <select id="categoria" name="categoria">
-                    <option value="">Select a Category</option>
-                    <optgroup label="New Models">
-                        <option value="70">Beats Studio Buds</option>
-                    </optgroup>
-                    <optgroup label="Wireless">
-                        <option value="45">Beats Flex</option>
-                        <option value="17">Powerbeats</option>
-                        <option value="2">Beats Solo3 Wireless</option>
-                        <option value="14">Powerbeats Pro</option>
-                    </optgroup>
-                    <optgroup label="Premium">
-                        <option value="3">Beats Studio3 Wireless</option>
-                    </optgroup>
-                    <optgroup label="Classic - Wired">
-                        <option value="3">Beats EP</option>
-                    </optgroup>
-                </select>
-            </div>
-
-
-            <div class="reg-form__photo">
-                <label for="file">Choose a Photo <img src="img/outline_add_photo_alternate_white_24dp.png"
-                        alt="icon"></label>
-                <input type="file" id="file" name="foto" accept="image/*">
-            </div>
-
-
-
+            <!-- ----------------------------- DESCRIPTION  -->
 
             <div class="reg-form__description">
                 <label for="detalles">Product description:</label>
                 <br>
                 <textarea id="detalles" name="detalles"></textarea>
             </div>
+          
+            
+            
+                <!-- -----------------------------PHOTO -->
+                <div class="reg-form__photo">
+                    <label for="photo">Choose a Photo</label>
+                    <input type="text" id="photo" name="photo"  style="color: black;">
+                </div>
+                <div class="pop-up-alert"></div>
+                
 
 
 
-
+            <!-- -----------------------------FREE SHIPPING -->
 
             <div class="reg-form__free-shipping">
                 <label for="envio">Free shipping</label>
                 <input type="checkbox" id="envio" name="envio" value="si">
 
             </div>
+            
+            
+            <!-- -----------------------------SUBMIT BUTTON -->
 
-            <div class="submit-botton">
-                <input type="submit" value="Enter">
+            <div class="submit-button " >
+                <input  type="submit" value="Enter" class="button" >
+                <span></span>
             </div>
 
         </form>
     </div>
     
+    
+    
+    <div class="listado-de-productos">
+    <h1>Listado de Productos </h1>
+    
+        <div id="listado-productos">
+       <!-- Se inyecta la tabla de -->
+        </div>
+    </div>
 
+    
+    
+    
+
+<script src="/js/alta.js"></script>
 </body>
 
 </html>
