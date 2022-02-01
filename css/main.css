@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,800;1,900&family=Quintessential&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -321,6 +322,14 @@
   background: rgba(255, 255, 255, 0.911);
 }
 
+.submit-button:hover::after {
+  color: red;
+  background: white;
+  content: "To enable the button fill out the form";
+  top: 0;
+  font-size: 10px;
+}
+
 .submit-button {
   margin-bottom: 60px;
 }
@@ -361,14 +370,6 @@ POP UP ALERT - VALIDACIONES
   width: 90%;
 }
 
-.enable-button::after {
-  color: red;
-  background: white;
-  content: "To enable the button fill out the form";
-  top: 0;
-  font-size: 10px;
-}
-
 /************************************************** *
 Listado de Productos TABLA
 ************************************************ */
@@ -379,13 +380,20 @@ Listado de Productos TABLA
   margin-bottom: 400px;
 }
 
+.listado-de-productos h1 {
+  font-family: "Quintessential", cursive;
+  box-shadow: -1px 17px 19px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 17px 19px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 17px 19px -10px rgba(0, 0, 0, 0.75);
+}
+
 table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
-  padding: 5px;
+  padding: 8px;
   font-weight: 500;
   font-size: 10px;
-  width: 60%;
+  width: 70%;
   margin: auto;
   box-shadow: 10px 10px 18px -7px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 18px -7px rgba(0, 0, 0, 0.75);
@@ -394,6 +402,21 @@ table, th, td {
 
 .table-heading {
   background-color: blueviolet;
+}
+
+.plantilla-productos-imagen {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(179, 45, 163, 0.503);
+  border: azure 1px solid;
+}
+
+.plantilla-productos-imagen:hover {
+  background-color: rgba(247, 247, 250, 0.537);
+}
+
+#listado-productos {
+  margin-top: 20px;
 }
 
 /* ***************************************************************/

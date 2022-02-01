@@ -1,15 +1,18 @@
-//=============================================================
-//=============================================================
+
 //=============================================================
 //=============================================================
 // Variables y Arrays
 
 
-let productos = [];
+let productos = [
+
+
+];
 
 const inputs = document.querySelectorAll(".reg-form input");
 
-// Obteniedo el value de los select alamcenandolos en un array e enviadolos al objeto producto
+//=======================================selectValues
+// Obteniedo el value de los select almcenandolos en un array e enviadolos al objeto producto
 const selectBrand = document.querySelectorAll("form select")[0];
 const selectCategory = document.querySelectorAll("form select")[1];
 let brandArray = [];
@@ -29,10 +32,30 @@ selectCategory.addEventListener("change", () => {
 	categoryArray.push(selectCategory.options[selectCategory.selectedIndex].text);
 });
 
+//=======================================selectValues
+
+//=======================================valueTextarea
+// Textarea value 
+
+const textareaArray = []
+
+var valueInVar = '';
+function textareaToVar(){
+     valueInVar = document.querySelector('.reg-form__description textarea').value
+     
+     if(textareaArray.length == 1){
+     textareaArray.shift()
+     }
+     textareaArray.push(valueInVar)
+     }
+
+ 
+
+//=======================================valueTextarea
+
 const form = document.querySelector(".reg-form-container");
 const button = document.querySelector(" form .button");
-let span = document.querySelector('.submit-button span ')
-span.classList.add('enable-button')
+
 
 
 
@@ -70,7 +93,6 @@ function algunCampoNoValido(){
 
 
 
-
 //=============================================================
 //=============================================================
 
@@ -92,15 +114,14 @@ const setCustomValidityJS = function (mensaje, index) {
 
 function validar(valor, validador, index){
 
-     console.log(valor, index);
+     // console.log(valor, index);
      
      if(!validador.test(valor)){
-     
+
           setCustomValidityJS("Este campo no es valido", index);
           camposValidos[index] = false
           button.disabled = true  // button activado
           return null
-          
           
      }
           
@@ -135,16 +156,20 @@ const regExpValidar = [
 
 
 inputs.forEach((input, index)=>{
-
+if(input.type != 'checkbox'){
+     
      input.addEventListener('input', ()=>{
      
-     validar(input.value, regExpValidar[index], index )
+          validar(input.value, regExpValidar[index], index )
+          textareaToVar()
      
-     })
+          
+          })
+
+}
+
 
 })
-
- 
 
 //============================================================
 //============================================================
@@ -161,17 +186,16 @@ form.addEventListener("submit", (e) => {
 		nombre: inputs[0].value,
 		precio: inputs[1].value,
 		stock: inputs[2].value,
+		detalles: textareaArray[0],
 		foto: inputs[3].value,
-		detalles: inputs[4].value,
-		envio: inputs[5].checked,
+		envio: inputs[4].checked
 	};
           
+          console.log(producto);
           productos.push(producto)
 	//Borro el formulario despues de enviarse
-	console.log(producto);
+	// console.log(producto);
 	inputs.forEach(input => input.value = '')
-	brandArray[0] = ''
-	categoryArray[0] = ""
 	inputs[4].checked = false
 	
 	
@@ -180,58 +204,49 @@ form.addEventListener("submit", (e) => {
 	button.disabled = true 
      camposValidos = [false,false,false,false]
      
-     renderProdsTemplateStrings()
+     rederProds()
+  
 	
 });
 
 
-//============================================================
-//============================================================
-
-
-     // 5-) Creacion de tabla  de productos TABLAAA
-
-     function renderProdsTemplateStrings(){
-          let html = ' '
-          
-          html +=   ` <table> `
-          html +=   ` 
-               <tr class="table-heading">
-                            <th>Brand </th> 
-               		   <th>Category </th> 
-               		   <th> Name </th> 
-               		   <th>Price </th> 
-               		   <th>Stock </th> 
-               		   <th>Photo </th> 
-               		   <th>Details </th> 
-               		   <th>Shipping </th>
-               </tr>
-          
-           `
-          const listado = document.getElementById('listado-productos')
-          for(let i = 0 ; i < productos.length;  i++){
-          
-               html+= ` 
-                
-                     <tr>
-                                  <th>${productos[i].marca} </th> 
-                                  <th>${productos[i].categoria}</th> 
-                                  <th>${productos[i].nombre}</th> 
-                                  <th>${productos[i].precio}</th> 
-                                  <th>${productos[i].stock}</th> 
-                                  <th>${productos[i].foto }</th> 
-                                  <th>${productos[i].detalles}</th> 
-                                  <th>${productos[i].envio }</th>
-                     </tr>
-               
-               
-               `
-          }
-          
-              
-          html += `</table>`
      
-          listado.innerHTML = html 
-      
+     //============================================================
+     //============================================================
+
+     //Inyeccion de  tabla con HANDLEBAR a traves de peticion  AJAX 
+     
+     function rederProds(){
+     
+     
+     const xhr = new XMLHttpRequest
+     xhr.open('get','plantillas/listado.hbs' )
+     xhr.addEventListener('load', ()=>{
+          if(xhr.status == 200){
+          let plantillaHbs = xhr.response
+               // console.log( plantillaHbs);
+               
+                          //                                 metodo               parametro plantilla 🥝
+               var template = Handlebars.compile(plantillaHbs)
+               // execute the compiled template and print the output to the console 
+               
+                                        // Se le pasa un objeto que replaza arriba 🥝
+               let html = template({productos: productos })
+               
+               document.getElementById('listado-productos').innerHTML = html
+          }
+     })
+     
+     xhr.send()
+     
      
      }
+     
+     rederProds()
+     
+     
+     
+
+     
+     
+     
