@@ -1,28 +1,6 @@
 
-/*
 
-1. Se buscan la plantilla navbar con Ajax  ✅
 
-       - Create an XMLHttpRequest object
-       - Define a callback function
-       - Open the XMLHttpRequest object
-       - Send a Request to a server
-
-2. Se inyecta el contenido a cada elemnto del nav ✅
-
-3. Conectar las navegaciones con el historial del navegador y los botones atras y delante  ✅
-
-4. Carga inicial de la vista determinada por la url visitada  ✅
-
-5. Cuando se llega a la primera navegacion dando atras atras nos da error
-    -Simplificacion de codigo  ✅
-
-6. Marcar la navegacion, cuando demos click los links queden con otro color
-    -  funcion dentro un  un foreach agregar las clases de boostrap siempre y cuando el id de la url sea el mismo que el del elemento a clickeado, en caso que no borrarla, esta funcion se pasa en todos los lugares donde se cambia la url 
- */
- 
- 
- 
  
     console.log(document.querySelector('title').textContent)
 
@@ -55,28 +33,12 @@ function start(){
         })
     }
     
-        /*=================================================== */
-    /* Carga de la barra de navegación */
-        /*=================================================== */
-    let header = document.querySelector('header')
-    
-    let archivo = getNombreArchivo('navbar')
-    let xhr = ajax(archivo)
-    xhr.addEventListener('load', () => {
-        if (xhr.status == 200) {
-            header.innerHTML = xhr.response
-    
-            getPlantillas()
-        }
-    })
-    
-    
   
     
    function  initJS(id){
     
     if(id == 'alta'){
- 
+
       initAlta()
 
     }else if(id =='cards'){
@@ -98,7 +60,7 @@ function start(){
     }
   }
    
-    
+
     
     function cargarPlantilla(id){
  
@@ -129,7 +91,7 @@ function start(){
     /*=================================================== */
     /* Carga inicial de la vista determinada por la url visitada */
     /*=================================================== */
-        let id = location.hash.slice(1)  || 'modal-carrito' || "inicio"
+        let id = location.hash.slice(1)  || "inicio"
         marcarLink(id)
         cargarPlantilla(id)
   
@@ -152,10 +114,12 @@ function start(){
     
         window.addEventListener('hashchange', () => {
          
-            let id = location.hash.slice(1) || 'modal-carrito' || "inicio"
+            let id = location.hash.slice(1) || "inicio"
             marcarLink(id)
     
             cargarPlantilla(id)
+            
+          
      
             
             

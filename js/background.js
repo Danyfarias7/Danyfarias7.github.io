@@ -28,27 +28,70 @@ function background() {
 	});
 }
 
-background();
+
+
+
 
 // Se toma el id del url y cuando se carga la pagina se le añade ese id como clase que su vez es una clase de css
 
 function backgroundLoad() {
-	window.addEventListener("load", () => {
-		links.forEach((link) => {
-			links.forEach((link) => {
-			
-				let id = location.hash.slice(1);
 
-			
-				// Se borra la primera clase del body
-				body.classList.remove(body.classList[0]);
-				// Se añade la clase correspondiente
-				body.classList.toggle(`body-${id}`);
+     
+     
+     	window.addEventListener("load", () => {
+     	
+               links.forEach((link) => {
+                    links.forEach((link) => {
+                    
+                         let id = location.hash.slice(1);
+     
+                    
+                         // Se borra la primera clase del body
+                         body.classList.remove(body.classList[0]);
+                         // Se añade la clase correspondiente
+                         body.classList.toggle(`body-${id}`);
+     
+                         
+                    });
+               });
+               
+               
+          });
+     
+     
 
-				
-			});
-		});
-	});
+
+	
 }
 
-backgroundLoad() 
+
+     function backgroundHashChange(){
+     
+     
+          window.addEventListener('hashchange', ()=>{
+
+               links.forEach((link) => {
+                    links.forEach((link) => {
+                    
+                         let id = location.hash.slice(1);
+          
+                    
+                         // Se borra la primera clase del body
+                         body.classList.remove(body.classList[0]);
+                         // Se añade la clase correspondiente
+                         body.classList.toggle(`body-${id}`);
+          
+                         
+                    });
+               });
+          
+          
+          })
+     
+     }
+     
+
+     background();
+     backgroundLoad() 
+     backgroundHashChange()
+

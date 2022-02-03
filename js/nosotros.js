@@ -1,5 +1,5 @@
-function initNosotros(){
+function initNosotros() {
+	console.log("InitNosotros");
 
-     console.log('InitNosotros');
-     
-     }
+
+}
