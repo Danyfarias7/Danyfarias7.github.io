@@ -97,7 +97,6 @@ console.log('initCards');
   
   
   
-  
   card.innerHTML =  `
           <article class="card__article">
               <div class="card__image">
