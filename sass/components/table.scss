@@ -1,0 +1,135 @@
+
+/************************************************** *
+Listado de Productos TABLA
+************************************************ */
+
+.listado-de-productos{
+
+     margin-top: 250px;
+     width: 90%;
+     text-align: center;
+     margin-bottom: 400px;
+    
+  
+ }
+ 
+ .listado-de-productos h1{
+ 
+     font-family: 'Poppins', sans-serif;
+
+    //  font-family: 'Quintessential', cursive;
+     box-shadow: -1px 17px 19px -10px rgba(243, 241, 241, 0.75);
+ -webkit-box-shadow: -1px 17px 19px -10px rgba(178, 213, 54, 0.75);
+ -moz-box-shadow: -1px 17px 19px -10px rgba(230, 230, 28, 0.75);
+ letter-spacing: 5px;
+ font-weight: 400;
+ 
+ background-color: rgba(0, 0, 128, 0.537);
+ width: 300px;
+     
+ 
+ }
+ 
+ 
+ table , th, td{
+ 
+ 
+     border-collapse: collapse;
+     padding: 10px;
+     font-weight: 500;
+     font-size: 10px;
+     width: 70%;
+     margin: auto;
+     box-shadow: 10px 10px 18px -7px rgba(240, 240, 240, 0.87);
+     -webkit-box-shadow: 10px 10px 18px -7px rgba(253, 251, 251, 0.864);
+     -moz-box-shadow: 10px 10px 18px -7px rgba(251, 246, 246, 0.85);
+  background-color: rgba(0, 0, 128, 0.605);
+  
+ 
+ }
+ 
+ table th {
+ color: rgb(20, 11, 11);
+ font-weight: 700;
+ background-color:white;
+ border-bottom: solid 3px red;
+ 
+ box-shadow: 10px 10px 18px -7px rgba(18, 18, 18, 0.87);
+ -webkit-box-shadow: 10px 10px 18px -7px rgba(8, 8, 8, 0.864);
+ -moz-box-shadow: 10px 10px 18px -7px rgba(25, 25, 25, 0.85);
+
+ 
+ }
+ 
+//  .table-heading{
+// //  background-color: rgb(133, 11, 247);
+
+ 
+//  }
+
+ 
+ .plantilla-productos-imagen{
+ 
+      width: 70px;
+      height:  70px;
+      background-color: rgba(187, 156, 184, 0.503);
+     //  border: azure 1px solid;
+ 
+ }
+ 
+ .plantilla-productos-imagen:hover{
+ 
+     background-color: rgba(247, 247, 250, 0.537);
+ 
+ }
+ 
+ #listado-productos{
+ margin-top: 20px;
+ }
+ 
+ 
+ .table-accion{
+
+     background-color: rgba(245, 245, 240, 0.972);
+     color: black;
+     border-bottom: 2px solid rgb(213, 122, 122);
+     font-weight: 500;
+     
+     }
+     
+     
+     .table-button{
+     margin-top: 5px;
+     background-color: black;
+
+     border-radius: 8px;
+     font-size: 10px;
+     padding: 8px;
+     padding-left: 20px;
+     padding-right: 20px;
+     cursor: pointer;
+     
+     
+     }
+     
+     .table-button:hover{
+     
+     background-color: red;
+
+     
+     }
+     
+      
+.table-products-not-found{
+
+
+    margin-top: 70px;
+    background-color: rgba(126, 125, 130, 0.673);
+  color: rgb(248, 241, 241);
+    font-size: 25px;
+    font-weight: 500;
+ padding: 10px 0px;
+ border-radius: 2px;
+ 
+
+}

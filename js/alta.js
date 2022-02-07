@@ -97,7 +97,8 @@ function renderProds() {
 			// execute the compiled template and print the output to the console
 
 			// Se le pasa un objeto que replaza arriba 🥝
-			let html = template({ productos: productos });
+			// let html = template({ productos: productos, validos: !algunCampoNoValido()});
+			let html = template({productos, validos: !algunCampoNoValido()});
 
 			document.getElementById("listado-productos").innerHTML = html;
 		}
@@ -200,6 +201,7 @@ function initAlta() {
 			input.addEventListener("input", () => {
 				validar(input.value, regExpValidar[index], index);
 				textareaToVar();
+				renderProds()
 			});
 		}
 	});
