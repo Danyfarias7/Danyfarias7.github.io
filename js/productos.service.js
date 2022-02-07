@@ -22,7 +22,7 @@ const URL_PRODUCTOS =
           return productoActualizado
       }
       
-      async function borrarProductoService() {
+      async function borrarProductoService(id) {
           let productoBorrado = await del(URL_PRODUCTOS, id)
           //console.log(productoBorrado)
           return productoBorrado

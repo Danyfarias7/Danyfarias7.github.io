@@ -1,34 +1,63 @@
 
+
 {{#if productos.length}}
-          <table>
-                         <tr class="table-heading">
-                                      <th>Brand </th> 
-                         		   <th>Category </th> 
-                         		   <th> Name </th> 
-                         		   <th>Price </th> 
-                         		   <th>Stock </th> 
-                         		   <th>Details </th> 
-                         		   <th>Photo </th> 
-                         		   <th>Shipping </th>
-                         </tr>
-                         
-                         {{#each productos}}
-                              <tr>
-                                            <td>{{marca}}</td> 
-                                            <td>{{categoria}}</td> 
-                                            <td>{{nombre}}</td> 
-                                            <td>{{precio}}</td> 
-                                            <td>{{stock}}</td> 
-                                            <td>{{detalles}}</td> 
-                                            <td>
-                                            <img src="{{foto }}" alt="  {{nombre }}" class="plantilla-productos-imagen">
-                                            </td> 
-                                            {{#if envio}}
-                                            <td>Yes</td>
-                                            {{else}}
-                                            <td>No</td>
-                                            {{/if}}
-                              </tr>
-                         {{/each }}
-          </table>
+	<table>
+		<tr class="table-heading">
+			<th>Brand </th>
+			<th>Category </th>
+			<th> Name </th>
+			<th>Price </th>
+			<th>Stock </th>
+			<th>Details </th>
+			<th>Photo </th>
+			<th>Shipping </th>
+			<th class="table-accion">Accion</th>
+		</tr>
+
+		{{#each productos}}
+			<tr>
+				<td>{{marca}}</td>
+				<td>{{categoria}}</td>
+				<td>{{nombre}}</td>
+				<td>{{precio}}</td>
+				<td>{{stock}}</td>
+				<td>{{detalles}}</td>
+				<td>
+					<img
+						src="{{foto}}"
+						alt="  {{nombre}}"
+						class="plantilla-productos-imagen"
+					/>
+				</td>
+				{{#if envio}}
+					<td>Yes</td>
+				{{else}}
+					<td>No</td>
+				{{/if}}
+				<td>
+					{{#if ../validos}}
+						<button
+							class="table-button"
+							onclick="actualizarProducto({{id}})"
+						>Update</button>
+					{{else}}
+						<button
+							disabled
+							class="table-button"
+							onclick="actualizarProducto({{id}})"
+							style="background-color: rgba(255, 255, 255, 0.442);"
+						>Update</button>
+					{{/if}}
+					<button
+						class="table-button"
+						onclick="borrarProducto({{id}})"
+					>Remove</button>
+
+				</td>
+			</tr>
+		{{/each}}
+	</table>
+	
+      {{else}}
+            <h3 class="table-products-not-found">Products were not found</h3>
 {{/if}}
